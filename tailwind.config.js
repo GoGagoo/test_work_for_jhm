@@ -6,9 +6,6 @@ export default {
 			colors: {
 				brown: '#755858',
 			},
-			fontFamily: {
-				myfont: [''],
-			},
 		},
 	},
 	plugins: [],

@@ -1,7 +1,11 @@
-<script setup></script>
+<script setup>
+import Navbar from './components/Navbar.vue'
+</script>
 
 <template>
-	<h1 class="text-red-500">Barev!</h1>
+	<Navbar />
+
+	
 </template>
 
 <style scoped></style>
