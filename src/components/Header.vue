@@ -1,6 +1,6 @@
 <script setup>
 import Order from './Order.vue'
-import SaveButton from './SaveButton.vue'
+import Button from './Button.vue'
 
 </script>
 
@@ -51,7 +51,9 @@ import SaveButton from './SaveButton.vue'
 			<div class="row-span-2 col-span-12 mt-12">
 				<div class="rounded-lg p-4">
 					<h2 class="text-lg text-right mr-12 mb-2">Итого: 3400</h2>
-					<SaveButton />
+					<Button color="green">
+						Сохранить
+					</Button>
 				</div>
 			</div>
 		</div>

@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.button {
+  @apply text-white font-medium;
+}
+
+.button-blue {
+  @apply bg-blue-500 hover:bg-blue-600 border border-black;
+}
+
+.button-green {
+  @apply bg-[#61A91A] hover:bg-green-600;
+}
+
 @font-face {
 	font-family: 'Roboto';
 	src: url('../fonts/Roboto-Regular.ttf') format('truetype');

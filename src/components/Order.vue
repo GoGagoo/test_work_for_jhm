@@ -1,13 +1,21 @@
 <script setup>
-import AddButton from './AddButton.vue'
-import { ref, onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
+import Button from './Button.vue'
 
 const products = ref([])
 
-onMounted(async () => {
-  const response = await fetch('https://dev-su.eda1.ru/test_task/products.php')
-  const data = await response.json()
-  products.value = data.products
+const fetchProductData = async () => {
+  try {
+    const response = await fetch('https://dev-su.eda1.ru/test_task/products.php')
+    const data = await response.json()
+    products.value = data.products
+  } catch (error) {
+    console.error('Error fetching data:', error)
+  }
+}
+
+onMounted(() => {
+  fetchProductData()
 })
 </script>
 
@@ -44,5 +52,7 @@ onMounted(async () => {
 		/>
 	</div>
 
-	<AddButton />
-</template>
+<Button color="blue" class="ml-6">
+  Добавить
+</Button>
+</template>./Button.vue
