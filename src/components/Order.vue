@@ -52,7 +52,7 @@ onMounted(() => {
 		/>
 	</div>
 
-<Button color="blue" class="ml-6">
-  Добавить
-</Button>
-</template>./Button.vue
+	<Button color="blue" class="ml-6">
+		Добавить
+	</Button>
+</template>
