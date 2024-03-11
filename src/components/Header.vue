@@ -1,6 +1,6 @@
 <script setup>
-import Order from './Order.vue'
 import Button from './Button.vue'
+import Order from './Order.vue'
 
 </script>
 
@@ -51,10 +51,10 @@ import Button from './Button.vue'
 			<div class="row-span-2 col-span-12 mt-12">
 				<div class="rounded-lg p-4">
 					<h2 class="text-lg text-right mr-12 mb-2">Итого: 3400</h2>
-					<Button color="green">
+				</div>
+				<Button class="p-12 mt-2 ml-96" color="green">
 						Сохранить
 					</Button>
-				</div>
 			</div>
 		</div>
 	</div>
