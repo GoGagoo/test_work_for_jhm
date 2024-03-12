@@ -5,17 +5,19 @@ import Button from './Button.vue'
 const products = ref([])
 
 const fetchProductData = async () => {
-  try {
-    const response = await fetch('https://dev-su.eda1.ru/test_task/products.php')
-    const data = await response.json()
-    products.value = data.products
-  } catch (error) {
-    console.error('Error fetching data:', error)
-  }
+	try {
+		const response = await fetch(
+			'https://dev-su.eda1.ru/test_task/products.php'
+		)
+		const data = await response.json()
+		products.value = data.products
+	} catch (error) {
+		console.error('Error fetching data:', error)
+	}
 }
 
 onMounted(() => {
-  fetchProductData()
+	fetchProductData()
 })
 </script>
 
@@ -31,7 +33,12 @@ onMounted(() => {
 			class="ml-6 pl-4 py-3 pr-8 border border-black focus:outline-none font-light text-left w-80 bg-[#EEF8FF] border-b-blue-400 sm:text-xl text-blue-400 rounded-none"
 		>
 			<option>Выберите продукцию</option>
-			<option v-for="product in products" :key="product.id">{{ product.title }}</option>
+			<option
+				v-for="product in products"
+				:key="product.id"
+			>
+				{{ product.title }} - {{ product.price }}
+			</option>
 		</select>
 	</div>
 
@@ -52,7 +59,5 @@ onMounted(() => {
 		/>
 	</div>
 
-	<Button color="blue" class="ml-6">
-		Добавить
-	</Button>
+	<Button color="blue" class="ml-6"> Добавить </Button>
 </template>

@@ -1,7 +1,7 @@
 <script setup>
 import Button from './Button.vue'
 import Order from './Order.vue'
-
+import OrderItem from './OrderItem.vue'
 </script>
 
 <template>
@@ -12,9 +12,6 @@ import Order from './Order.vue'
 			</div>
 
 			<div class="col-span-12 pt-12 mr-12">
-				<div>
-					
-				</div>
 				<table class="w-full table-auto overflow-scroll max-h-32">
 					<thead>
 						<tr>
@@ -30,31 +27,18 @@ import Order from './Order.vue'
 						</tr>
 					</thead>
 					<tbody class="overflow-y-scroll">
-						<tr>
-							<td class="px-4 py-3 font-light">Борщевой набор номер три</td>
-							<td class="px-4 py-2 text-right">
-								<input
-									value="11 шт."
-									class="w-12 bg-transparent font-light text-center"
-								/>
-							</td>
-							<td class="px-4 py-2 text-right font-light border-gray-300">
-								1100.00
-							</td>
-						</tr>
-						
+						<OrderItem />
 					</tbody>
 				</table>
 			</div>
-
 
 			<div class="row-span-2 col-span-12 mt-12">
 				<div class="rounded-lg p-4">
 					<h2 class="text-lg text-right mr-12 mb-2">Итого: 3400</h2>
 				</div>
 				<Button class="p-12 mt-2 ml-96" color="green">
-						Сохранить
-					</Button>
+					Сохранить
+				</Button>
 			</div>
 		</div>
 	</div>
